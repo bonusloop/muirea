@@ -1,19 +1,26 @@
-//import React from 'react';
+import React from 'react';
 import './App.css';
-//import Button from '@mui/material/Button';
-import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import { AppBar, Button, Container, IconButton, Toolbar, Typography } from '@mui/material';
+import Menu from '@mui/material/Menu';
+import { Box } from '@mui/system';
+
 
 function App() {
   return (
-    <div className="App">
-      <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack>
-    </div>
+    <AppBar position="fixed">
+      <Container fixed>
+        <Toolbar>
+          <IconButton edge="start" 
+          color="inherit" aria-label="menu" >
+            <Menu/>
+          </IconButton>
+          <Typography variant="h5">646runGo</Typography>
+          <Box mr={3}>
+            <Button color="inherit" variant="outlined">Log In</Button>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
 
